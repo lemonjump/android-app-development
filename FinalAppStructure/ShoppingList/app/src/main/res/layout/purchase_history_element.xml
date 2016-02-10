@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="49sp"
+    android:padding="5dp">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/the_store_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Example Purchase History"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/the_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/the_store_name"
+            android:text="Price per unit"
+            android:textStyle="bold"
+            android:textColor="#309CBF"
+            android:textSize="13dp" />
+
+        <TextView
+            android:id="@+id/the_separator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/the_store_name"
+            android:layout_toRightOf="@id/the_price"
+            android:text="|"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:textSize="13dp" />
+
+        <TextView
+            android:id="@+id/the_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/the_store_name"
+            android:layout_toRightOf="@id/the_separator"
+            android:text="Date"
+            android:textSize="13dp"
+            android:textStyle="italic"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true">
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="62dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:text="@string/remove"
+            android:textSize="9dp" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,98 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textstatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginTop="8dp"
+        android:paddingTop="10dp"/>
+
+    <AutoCompleteTextView
+        android:id="@+id/storename"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginTop="25dp"
+        android:textSize="20dp"
+        android:maxLength="20"
+        android:hint="@string/insertstorename"
+        android:inputType="text" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/storename"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/pricetext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:textSize="20dp"
+            android:text="@string/price"
+            android:paddingRight="5dp"/>
+
+        <EditText
+            android:id="@+id/price_exact"
+            android:hint="@string/zerozero"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="30dp"
+            android:gravity="right"
+            android:layout_centerInParent="true"
+            android:textSize="25dp"
+            android:maxLength="10"
+            android:layout_toRightOf="@id/pricetext"
+            android:inputType="number"
+            />
+
+        <EditText
+            android:id="@+id/price_change"
+            android:hint="@string/zerozero"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="30dp"
+            android:layout_centerInParent="true"
+            android:layout_toRightOf="@id/price_exact"
+            android:gravity="right"
+            android:textSize="25dp"
+            android:maxLength="2"
+            android:inputType="number"
+            />
+
+        <TextView
+            android:id="@+id/per"
+            android:text="@string/per"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/price_change"
+            android:gravity="right"
+            android:textSize="15dp"
+            android:padding="5dp"
+            android:inputType="number"
+            />
+
+        <Spinner
+            android:id="@+id/unittype"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:layout_toRightOf="@id/per"
+            android:textSize="15dp"
+            android:gravity="center"
+            />
+    </RelativeLayout>
+
+</RelativeLayout>
